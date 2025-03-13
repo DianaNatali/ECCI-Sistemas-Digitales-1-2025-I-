@@ -32,8 +32,8 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
   <tr>
     <td>3-5</td>
     <td>Secuencias en matriz de leds</td>
-    <td><a href="/laboratorios/1_lab01/README.md">lab01</a></td>
-    <td><a href="">Link </a></td>
+    <td>lab01</td>
+    <td><a href="https://classroom.github.com/a/jG2akraQ">Link </a></td>
     <td>10-14 Mar/2025</td>
   </tr>
   <tr>
