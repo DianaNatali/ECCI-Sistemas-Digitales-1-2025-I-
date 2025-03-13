@@ -31,14 +31,14 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
   </tr>
   <tr>
     <td>3-5</td>
-    <td>Secuencia en matriz de leds</td>
+    <td>Secuencias en matriz de leds</td>
     <td><a href="/laboratorios/1_lab01/README.md">lab01</a></td>
     <td><a href="">Link </a></td>
     <td>10-14 Mar/2025</td>
   </tr>
   <tr>
     <td>6-7</td>
-    <td> Visualización LCD </td>
+    <td> Visualización en pantalla LCD 16x2</td>
     <td><a href="/laboratorios/2_lab02/README.md">lab02</a></td>
     <td><a href="">Link </a></td>
     <td>17-21 Mar/2025</td>
