@@ -101,7 +101,7 @@ La CGRAM es una pequeña porción de memoria en la LCD (típicamente $64$ bytes)
 
 ## Procedimiento
 
-### 1. Parte 1: Visualizar texto genérico
+### Parte 1: Visualizar texto genérico
 
   Mostrar en la LCD diferentes secuencias de texto.
 
