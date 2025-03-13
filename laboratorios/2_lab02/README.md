@@ -31,8 +31,6 @@ LCD significa "Pantalla de Cristal Líquido" (Liquid Crystal Display). El nombre
  <img src="/laboratorios/figs/lab02/LCD16x2_diag.png" alt="alt text" width=500 >
 </p>
 
-**Características del Módulo LCD 16×2:**
-
 * Voltaje de operación: 4.7V a 5.3V
 * Consumo de corriente: 1mA sin retroiluminación
 * Pantalla alfanumérica, permite mostrar letras y números
@@ -94,6 +92,11 @@ La CGRAM es una pequeña porción de memoria en la LCD (típicamente $64$ bytes)
     Una vez definido un carácter en la CGRAM, se puede mostrar en la pantalla LCD enviando el valor correspondiente a su ubicación en la CGRAM.
 
     Por ejemplo, si se define un carácter en la ubicación $0$ de la CGRAM, se puede mostrarlo enviando el valor $0$ x $00$ a la LCD.
+
+
+## Conexión con la Blue Pill
+
+![lcdxbluepill](/laboratorios/figs/lab02/lcdxbluepill.png)
 
 
 ## Procedimiento
