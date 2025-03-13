@@ -28,7 +28,7 @@ Sin embargo, el control de una LCD 16x2 implica una secuencia precisa de comando
 LCD significa "Pantalla de Cristal Líquido" (Liquid Crystal Display). El nombre LCD 16×2 se debe a que tiene 16 columnas y 2 filas. Existen varias configuraciones como 8×1, 8×2, 10×2, 16×1, entre otras, pero la más utilizada es la 16×2. Esto significa que puede mostrar 32 caracteres en total, donde cada carácter está compuesto por una matriz de 5×8 píxeles, como se muesta en la siguiente figura:
 
 <p align="center">
- <img src="/figs/lab02/LCD16x2_diag.png" alt="alt text" width=500 >
+ <img src="/laboratorios/figs/lab02/LCD16x2_diag.png" alt="alt text" width=500 >
 </p>
 
 **Características del Módulo LCD 16×2:**
@@ -46,7 +46,7 @@ LCD significa "Pantalla de Cristal Líquido" (Liquid Crystal Display). El nombre
 La pantalla LCD 16x2 cuenta con múltiples pines para alimentación, control y transferencia de datos. La siguiente lista describe sus funciones principales:
 
 <p align="center">
- <img src="/pics/lab04/LCD16x2.png" alt="alt text" width=500 >
+ <img src="/laboratorios/figs/lab02/LCD16x2.png" alt="alt text" width=500 >
 </p>
 
 * **Vss** = GND (Tierra)
