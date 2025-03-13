@@ -113,9 +113,9 @@ STM32CubeIDE es un entorno de desarrollo integrado (IDE) diseñado para programa
 
 Git es un sistema de control de versiones ampliamente utilizado para gestionar proyectos de software y hardware. GitHub es una plataforma basada en Git que permite alojar repositorios y colaborar en proyectos.
 
-1. Crear cuenta en [GitHub](https://git-scm.com/downloads).
+1. Crear cuenta en [GitHub](https://github.com/).
 
-2. Descargar Git en el computador a través del sitio oficial: [Git download](https://git-scm.com/).
+2. Descargar Git en el computador a través del sitio oficial: [Git download](https://git-scm.com/downloads).
 
 3. Seguir las instrucciones del instalador.
 
