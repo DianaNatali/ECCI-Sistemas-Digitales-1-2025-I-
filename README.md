@@ -40,7 +40,7 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
     <td>6-8</td>
     <td> Blinker en HAL vs Bare-Metal vs Mbed OS con STM32CubeIDE</td>
     <td><a href="/laboratorios/2_lab02/README.md">lab02</a></td>
-    <td><a href="">Link </a></td>
+    <td><a href="https://classroom.github.com/a/h1QA5cJW">Link </a></td>
     <td>24-30 Mar/2025</td>
   </tr>
   <tr>
