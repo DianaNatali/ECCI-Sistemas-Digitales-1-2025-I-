@@ -20,7 +20,13 @@ HAL, Bare-Metal y Mbed OS.
 4. LED (o usar el LED en **PC13** de la placa)
 5. Resistencia 220Ω (si se usa un LED externo).
 
-## 3. Procedimiento
+## 3. Manuales
+
+* [stm32](/laboratorios/2_lab02/stm32_reference_manual.pdf) 
+
+* [esp32](/laboratorios/2_lab02/esp32_reference_manual.pdf) 
+
+## 4. Procedimiento
 
 1. Paso 1: Configuración del Entorno
 
@@ -76,7 +82,7 @@ HAL, Bare-Metal y Mbed OS.
 
         * Flexibilidad en configuraciones de temporización.
 
-## Entregables
+## 5. Entregables
 
 * Documentación en **GitHub Classroom** siguiendo los lineamientos de la plantilla.
 
