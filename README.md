@@ -47,7 +47,7 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
     <td>8-10</td>
     <td> Visualización en pantalla LCD 16x2</td>
     <td><a href="/laboratorios/3_lab03/README.md">lab03</a></td>
-    <td><a href="">Link </a></td>
+    <td><a href="https://classroom.github.com/a/gEksGHDw">Link </a></td>
     <td>31 Mar-4 Abr/2025</td>
   </tr>
 
