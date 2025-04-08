@@ -54,7 +54,7 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
     <td>8-10</td>
     <td> Proyecto</td>
     <td>1ra. entrega</td>
-    <td><a href="https://classroom.github.com/a/EaIz8948">Link </a></td>
+    <td><a href="https://classroom.github.com/a/S4vRLSXj">Link </a></td>
     <td>08 Abr/2025</td>
   </tr>
 
