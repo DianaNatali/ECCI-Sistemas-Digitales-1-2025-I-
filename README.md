@@ -57,10 +57,14 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
     <td><a href="https://classroom.github.com/a/S4vRLSXj">Link </a></td>
     <td>08 Abr/2025</td>
   </tr>
+  <tr>
+    <td>10-12</td>
+    <td> ADC y Visualización en LCD I2C</td>
+    <td><a href="/laboratorios/4_lab04/README.md">lab04</a></td>
+    <td><a href="https://classroom.github.com/a/ue9-N-dv">Link </a></td>
+    <td>08 Abr/2025</td>
+  </tr>
 
-
-
-  
 
 
 </table>
