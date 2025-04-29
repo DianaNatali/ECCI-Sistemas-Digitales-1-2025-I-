@@ -33,11 +33,13 @@
 
 ## Fundamento teórico
 
-1. Convertidor Analógico a Digital (ADC) en STM32
+1. Convertidor Analógico a Digital (ADC):
+   
+    * STM32F103C8T6: El ADC del STM32F103C8T6 es de $12$ bits, lo que permite representar señales analógicas en un rango de $0$ a $4095$. En la práctica, su precisión efectiva es cercana a los $12$ bits, gracias a su buena linealidad y bajo ruido. En este laboratorio, se utilizará el canal $0$ (PA0) para leer el valor de tensión en un potenciómetro.
 
-    El ADC del STM32F103C8T6 es de $12$ bits, lo que permite representar señales analógicas en un rango de $0$ a $4095$. En este laboratorio, se utilizará el canal $0$ (```PA0```) para leer el voltaje proporcionado por un potenciómetro. La conversión se realiza en modo continuo, permitiendo lecturas constantes sin intervención adicional.
+    * ESP32: El ADC del ESP32 también es de $12$ bits de resolución nominal, lo que teóricamente permite representar señales analógicas entre $0$ y $4095$. Sin embargo, su precisión efectiva suele estar entre $9$ y $11$ bits debido a factores como ruido interno, no linealidad y la falta de calibración por defecto. En este laboratorio, se empleará el canal $0$ (GPIO36, también conocido como VP) para leer el valor de tensión en un potenciómetro.
 
-    ![adc](/laboratorios/figs/lab04/adc.png)
+        ![adc](/laboratorios/figs/lab04/adc.png)
 
 2. Comunicación I2C y Control de LCD $16\times2$:
 
@@ -63,9 +65,24 @@
 
 2. Conexión de la LCD 16x2 a través del módulo I2C:
 
-    * SDA del módulo I2C a ```PB7``` del STM32.
+    * ```SDA``` del módulo I2C a ```PB7``` del STM32.
 
-    * SCL del módulo I2C a ```PB6``` del STM32.
+    * ```SCL``` del módulo I2C a ```PB6``` del STM32.
+
+
+#### Para ESP32:
+
+1. Conexión del potenciómetro:
+
+    * Conectar los extremos del potenciómetro a VCC ($3.3$ V) y GND.
+
+    * Conectar el terminal central del potenciómetro al pin GPIO36 (canal $0$ del ```ADC1``` del ESP32).
+
+2. Conexión de la LCD 16x2 a través del módulo I2C:
+
+    * ```SDA``` del módulo I2C a ```GPIO21``` del ESP32.
+
+    * ```SCL``` del módulo I2C a ```GPIO22``` del ESP32.
     
 ### Parte 2: Configuración del proyecto
 
@@ -113,17 +130,33 @@ Para configurar **CubeMonitor** y visualizar los datos:
 
 1. Instalar CubeMonitor:
 
-    * Descargue e instalue **CubeMonitor** desde el [sitio oficial de STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html).
+    * Descargue e instale **CubeMonitor** desde el [sitio oficial de STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html).
+
+    * Escoja la opción que se ajuste a su sistema operativo:
+
+        ![monitor](/laboratorios/figs/lab04/monitor.png)
+
 
 2. Conectar el ```STM32``` al **CubeMonitor**:
 
     * Conectar el STM32 al PC a través del ST-Link.
 
-    * Agregar a su proyecto las líneas que considere de este archivo base [main.c](). Tenga en cuenta que ya cuenta con las librerías ```adc.h``` y ```i2c_lcd.h```.
+    * Agregar a su proyecto las líneas que considere de este archivo base [main.c](/laboratorios/4_lab04/main.c). Tenga en cuenta que ya cuenta con las librerías ```adc.h``` y ```i2c_lcd.h```.
 
 3. Configurar el flujo para **CubeMonitor**:
 
     * Descargue el archivo [flows.json](/laboratorios/4_lab04/flows.json)
+
+
+    * En **CubeMonitor**:
+
+        * En el menú que se muestra en la imagen seleccine la opción ```import```.
+
+            ![import1](/laboratorios/figs/lab04/import.png)
+
+        * Importe el flujo descarga en la opción ```select a file to import```.
+
+            ![import2](/laboratorios/figs/lab04/import1.png)
 
 
 
