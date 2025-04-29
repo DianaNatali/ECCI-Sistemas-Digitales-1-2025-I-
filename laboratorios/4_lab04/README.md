@@ -2,13 +2,18 @@
 
 ## Objetivos de aprendizaje
 
-* Comprender el funcionamiento del ADC (Convertidor Analógico a Digital) en el STM32.
+* **Comprender el funcionamiento del ADC (Convertidor Analógico a Digital)**.
 
-*  Configurar y utilizar la comunicación I2C para controlar una pantalla LCD $16\times2$.
+* **Configurar y utilizar la comunicación I2C para controlar una pantalla LCD $16\times2$**.
 
 * Integrar la lectura de valores analógicos y su visualización en tiempo real en la LCD.
 
+* Comprender cómo utilizar CubeMonitor para visualizar variables en tiempo real desde un microcontrolador STM32.
+
+* Integrar CubeMonitor con el STM32 y mostrar los valores leídos desde el ADC en un gráfico en tiempo real.
+
 * Desarrollar habilidades en programación embebida utilizando **STM32CubeIDE** y lenguaje ```C```.
+
 
 ## Materiales 
 
@@ -23,6 +28,8 @@
 * Protoboard y cables de conexión.
 
 * Entorno de desarrollo STM32CubeIDE.
+
+* CubeMonitor instalado.
 
 ## Fundamento teórico
 
@@ -52,13 +59,13 @@
 
     * Conectar los extremos del potenciómetro a VCC ($3.3$ V) y GND.
 
-    * Conectar el terminal central al pin ```PA0``` del STM32.
+    * Conectar el terminal central del potenciómetro al pin ```PA0``` del STM32.
 
-2. Conexión de la LCD 16x2:
+2. Conexión de la LCD 16x2 a través del módulo I2C:
 
-    * SDA del LCD a ```PB7``` del STM32.
+    * SDA del módulo I2C a ```PB7``` del STM32.
 
-    * SCL del LCD a ```PB6``` del STM32.
+    * SCL del módulo I2C a ```PB6``` del STM32.
     
 ### Parte 2: Configuración del proyecto
 
@@ -88,10 +95,43 @@
 
     * Se activa el periférico I2C.
 
+### Parte 3: Instalación de CubeMonitor
+
+**STM32CubeMonitor** es una herramienta de STMicroelectronics que permite monitorear en tiempo real variables del microcontrolador STM32 sin necesidad de implementar un protocolo de comunicación como UART o USB
+
+* ¿Qué hace CubeMonitor?
+
+    * Se conecta al microcontrolador vía ST-LINK (usando SWD).
+
+    * Lee directamente variables desde la memoria RAM.
+
+    * Permite visualizar datos en gráficas, indicadores, tablas, etc.
+
+    * Usa una interfaz de tipo ```Node-RED``` (es decir, basada en flujos con nodos conectados).
+
+Para configurar **CubeMonitor** y visualizar los datos:
+
+1. Instalar CubeMonitor:
+
+    * Descargue e instalue **CubeMonitor** desde el [sitio oficial de STM32CubeMonitor](https://www.st.com/en/development-tools/stm32cubemonitor.html).
+
+2. Conectar el ```STM32``` al **CubeMonitor**:
+
+    * Conectar el STM32 al PC a través del ST-Link.
+
+    * Agregar a su proyecto las líneas que considere de este archivo base [main.c](). Tenga en cuenta que ya cuenta con las librerías ```adc.h``` y ```i2c_lcd.h```.
+
+3. Configurar el flujo para **CubeMonitor**:
+
+    * Descargue el archivo [flows.json](/laboratorios/4_lab04/flows.json)
+
+
+
+
 
 ## Entregables
 
-1. Realice la implementación del código en *github classroom* y presentla
+1. Realice la implementación del código en *github classroom* y presentela
 en clase al docente.
 
 2. Modifique el código para convertir la lectura del ADC a tensión.

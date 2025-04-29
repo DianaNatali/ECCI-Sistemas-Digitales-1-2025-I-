@@ -1,0 +1,298 @@
+[
+    {
+        "id": "924b4e1650de1437",
+        "type": "acquisition in",
+        "z": "38c44a514d0715d6",
+        "name": "my_probe_in",
+        "probeconfig": "1efba89395bb5632",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "97c16db29ae9ef22"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "042e3f293399bc01",
+        "type": "variables",
+        "z": "38c44a514d0715d6",
+        "groupname": "adc_pot",
+        "accesspoint": 0,
+        "execonfig": "a6b77bdd10140e38",
+        "variablelist": [],
+        "triggerstartmode": "manual",
+        "triggername": "buffer_pot[0]",
+        "triggerthreshold": "",
+        "frequency": "",
+        "frequencyType": "0",
+        "snapshotheader": "",
+        "mode": "direct",
+        "lastImportedTime": 1745955336684,
+        "openStatus": false,
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "3ec76854594e2749"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "add7dd22bf4a52d6",
+        "type": "ui_button",
+        "z": "38c44a514d0715d6",
+        "name": "",
+        "group": "f9c34dde.1e2f4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Iniciar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "start",
+        "topicType": "str",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "042e3f293399bc01"
+            ]
+        ]
+    },
+    {
+        "id": "03c194a9971a093a",
+        "type": "ui_button",
+        "z": "38c44a514d0715d6",
+        "name": "",
+        "group": "f9c34dde.1e2f4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Detener",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "stop",
+        "topicType": "str",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "042e3f293399bc01"
+            ]
+        ]
+    },
+    {
+        "id": "3ec76854594e2749",
+        "type": "acquisition out",
+        "z": "38c44a514d0715d6",
+        "name": "my_probe_out",
+        "probeconfig": "1efba89395bb5632",
+        "x": 560,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "97c16db29ae9ef22",
+        "type": "processing",
+        "z": "38c44a514d0715d6",
+        "groupname": "adc_pot",
+        "groupid": "042e3f293399bc01",
+        "expressions": [],
+        "statistics": [],
+        "logmode": "no",
+        "logformat": "csv",
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "8a6798c975c1e19d",
+                "f2aeda0e4531c8a9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8a6798c975c1e19d",
+        "type": "debug",
+        "z": "38c44a514d0715d6",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f2aeda0e4531c8a9",
+        "type": "switch",
+        "z": "38c44a514d0715d6",
+        "name": "",
+        "property": "payload.variablename",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "buffer_pot[0]",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "ead63c567f8aa9c1"
+            ]
+        ]
+    },
+    {
+        "id": "48a9d4f89a41a7c4",
+        "type": "ui_chart",
+        "z": "38c44a514d0715d6",
+        "name": "",
+        "group": "f9c34dde.1e2f4",
+        "order": 12,
+        "width": "14",
+        "height": "10",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "601",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ead63c567f8aa9c1",
+        "type": "function",
+        "z": "38c44a514d0715d6",
+        "name": "",
+        "func": "if (msg.payload && msg.payload.variabledata && msg.payload.variabledata.length > 0) {\n    const lastvalue = msg.payload.variabledata[msg.payload.variabledata.length - 1];\n\n    const adcValue = lastvalue.y;\n\n    msg.payload = adcValue.toString();\n\n    return msg;\n} else {\n    msg.payload = \"No data\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 340,
+        "wires": [
+            [
+                "48a9d4f89a41a7c4"
+            ]
+        ]
+    },
+    {
+        "id": "1efba89395bb5632",
+        "type": "probe",
+        "probeid": "57FF73065186545208461987",
+        "probename": "ST-Link v2 57FF73065186545208461987",
+        "protocol": "SWD",
+        "frequency": "1.8 MHz - Default",
+        "probeproperty": "{\"SWD\":[\"4.6 MHz\",\"1.8 MHz - Default\",\"950 kHz\",\"400 kHz\",\"150 kHz\"],\"JTAG\":[\"18 MHz\",\"9 MHz\",\"4.5 MHz\",\"2.25 MHz\",\"1.12 MHz - Default\",\"560 kHz\",\"280 kHz\",\"140 kHz\"]}",
+        "probeversion": "ST Link firmware version V2.J41",
+        "connectionType": "p2p",
+        "nickname": "myprobe"
+    },
+    {
+        "id": "a6b77bdd10140e38",
+        "type": "exe-config",
+        "name": "adc_vars",
+        "exefile": "/home/dnmaldonador/Documents/ECCI/sistemas_digitales1/projects_stm32/adc_lcd_i2c/Debug/adc_lcd_i2c.elf",
+        "exefolder": "/home/dnmaldonador/Documents/ECCI/sistemas_digitales1/projects_stm32/adc_lcd_i2c//Debug",
+        "exevariablelist": [
+            {
+                "address": "0x20000088",
+                "name": "__sbrk_heap_end",
+                "type": 5
+            },
+            {
+                "address": "0x20000084",
+                "name": "buffer_pot[0]",
+                "type": 3,
+                "checked": true
+            },
+            {
+                "address": "0x2000008c",
+                "name": "uwTick",
+                "type": 5
+            },
+            {
+                "address": "0x20000000",
+                "name": "uwTickFreq",
+                "type": 2
+            }
+        ],
+        "expand": true,
+        "filename": "adc_lcd_i2c.elf",
+        "exeModifiedTime": 1745955302814,
+        "configLastUpdate": 1745955336291
+    },
+    {
+        "id": "f9c34dde.1e2f4",
+        "type": "ui_group",
+        "name": "Chart",
+        "tab": "17d09b07.741a55",
+        "order": 1,
+        "disp": false,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17d09b07.741a55",
+        "type": "ui_tab",
+        "name": "ADC",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
