@@ -17,7 +17,7 @@
 
 ## Materiales 
 
-* Placa de desarrollo STM32 Blue Pill (```STM32F103C8T6```).
+* Placa de desarrollo STM32 Blue Pill (```STM32F103C8T6```) O ESP32.
 
 * Pantalla LCD $16\times2$. 
 
@@ -27,9 +27,9 @@
 
 * Protoboard y cables de conexión.
 
-* Entorno de desarrollo STM32CubeIDE.
+* Entorno de desarrollo.
 
-* CubeMonitor instalado.
+* LED y resistencias.
 
 ## Fundamento teórico
 
