@@ -67,7 +67,7 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
   <tr>
     <td>11-12</td>
     <td> PWM</td>
-    <td><a href="/laboratorios/5_lab05/README.md">lab04</a></td>
+    <td><a href="/laboratorios/5_lab05/README.md">lab05</a></td>
     <td><a href="https://classroom.github.com/a/Bb_3JcdI">Link </a></td>
     <td> </td>
   </tr>
