@@ -96,6 +96,12 @@ En este caso, la frecuencia del PWM será de 500 Hz, lo que significa que el cic
 El código configura un temporizador utilizando la API de ```ledc_timer_config_t```, donde se establece la frecuencia (```freq_hz```) y la resolución (```duty_resolution```). La resolución está definida como ```LEDC_TIMER_11_BIT```, lo que significa que el valor de duty cycle tiene $11$ bits, es decir, el rango de valores posibles para el ciclo de trabajo va de $0$ a $2047$.
 
 
+<div align="center">
+ <img src="/laboratorios/figs/lab05/pwmesp32.png" alt="pwm" width="550" />
+ </div>
+
+ Tomado de **[3]**
+
 
 En la imagen se evidencia:
 
@@ -111,11 +117,13 @@ El diagrama también menciona el *Fade Control* y la posibilidad de usar interru
 **Se recomienda consultar: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/ledc.html**
 
 
-<div align="center">
+ #### Conexiones
+
+ <div align="center">
  <img src="/laboratorios/figs/lab05/esp32.png" alt="pwm" width="550" />
  </div>
 
- Tomado de **[3]**
+
 
 
 ### 2. STM32
@@ -138,3 +146,12 @@ El sistema de generación de PWM se basa en el uso de temporizadores de propósi
  </div>
 
  Tomado de **[4]**
+
+
+ #### Conexiones
+
+ <div align="center">
+ <img src="/laboratorios/figs/lab05/stm32.png" alt="pwm" width="550" />
+ </div>
+
+
