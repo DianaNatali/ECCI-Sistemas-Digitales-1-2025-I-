@@ -58,12 +58,21 @@ A lo largo del laboratorio, se abordarán temas como la configuración de hardwa
     <td>08 Abr/2025</td>
   </tr>
   <tr>
-    <td>10-12</td>
+    <td>10-11</td>
     <td> ADC y Visualización en LCD I2C</td>
     <td><a href="/laboratorios/4_lab04/README.md">lab04</a></td>
     <td><a href="https://classroom.github.com/a/ue9-N-dv">Link </a></td>
     <td> </td>
   </tr>
+  <tr>
+    <td>11-12</td>
+    <td> PWM</td>
+    <td><a href="/laboratorios/5_lab05/README.md">lab04</a></td>
+    <td><a href="https://classroom.github.com/a/Bb_3JcdI">Link </a></td>
+    <td> </td>
+  </tr>
+
+
 
 
 
