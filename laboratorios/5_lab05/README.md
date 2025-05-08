@@ -87,21 +87,6 @@ El controlador LED_PWM (```ledc```) está diseñado principalmente para controla
 
 Tomado de **[2]**
 
-#### Calculo de la frecuencia de la señal PWM generada:
-
-La frecuencia del PWM en el código proporcionado está determinada por la configuración del temporizador en la ```función pwm_init()```. En particular, la frecuencia del PWM es establecida por el valor de ```PWM_FREQ_HZ```, que se configura a $500$ Hz en el código.
-
-En este caso, la frecuencia del PWM será de 500 Hz, lo que significa que el ciclo completo de onda (un período) se repite $500$ veces por segundo.
-
-El código configura un temporizador utilizando la API de ```ledc_timer_config_t```, donde se establece la frecuencia (```freq_hz```) y la resolución (```duty_resolution```). La resolución está definida como ```LEDC_TIMER_11_BIT```, lo que significa que el valor de duty cycle tiene $11$ bits, es decir, el rango de valores posibles para el ciclo de trabajo va de $0$ a $2047$.
-
-
-<div align="center">
- <img src="/laboratorios/figs/lab05/pwmesp32.png" alt="pwm" width="550" />
- </div>
-
- Tomado de **[3]**
-
 
 En la imagen se evidencia:
 
@@ -120,7 +105,7 @@ El diagrama también menciona el *Fade Control* y la posibilidad de usar interru
  #### Conexiones
 
  <div align="center">
- <img src="/laboratorios/figs/lab05/esp32.png" alt="pwm" width="550" />
+ <img src="/laboratorios/figs/lab05/esp32.png" alt="pwm" width="450" />
  </div>
 
 
@@ -141,17 +126,11 @@ El sistema de generación de PWM se basa en el uso de temporizadores de propósi
 
 * **Generación de señal PWM**: Al igual que en el ESP32, se incrementa el ciclo de trabajo en pasos de $20$% para observar cambios en la señal.
 
-<div align="center">
- <img src="/laboratorios/figs/lab05/stm32.png" alt="pwm" width="550" />
- </div>
-
- Tomado de **[4]**
-
 
  #### Conexiones
 
  <div align="center">
- <img src="/laboratorios/figs/lab05/stm32.png" alt="pwm" width="550" />
+ <img src="/laboratorios/figs/lab05/stm32.png" alt="pwm" width="450" />
  </div>
 
 
