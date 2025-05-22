@@ -29,7 +29,7 @@
 
 * Entorno de desarrollo.
 
-* LED y resistencias.
+
 
 ## Fundamento teórico
 
