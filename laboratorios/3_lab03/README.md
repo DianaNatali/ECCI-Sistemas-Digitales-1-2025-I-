@@ -48,7 +48,7 @@ La pantalla LCD 16x2 cuenta con múltiples pines para alimentación, control y t
 </p>
 
 * **Vss** = GND (Tierra)
-* **Vdd** = (+$3.3$ V a +$5$ V) – Alimentación de la pantalla
+* **Vdd** = (+ $3.3$ V a + $5$ V) – Alimentación de la pantalla
 * **Vo** = Ajuste de contraste 
 * **RS** = Selección de tipo de registro – RS= $0$: Comando, RS= $1$: Dato
 * **R/W** = Lectura/Escritura – R/W= $0$: Escritura, R/W= $1$: Lectura
