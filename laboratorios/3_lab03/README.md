@@ -113,7 +113,7 @@ La CGRAM es una pequeña porción de memoria en la LCD (típicamente $64$ bytes)
 
   3. Se muestran los iconos de batería en la primera fila de la pantalla.
 
-  4. Relizar una animación con estos iconos, mostrandolos uno a la vez en el mismo cursos de la pantallada.
+  4. Relizar una animación con estos iconos, mostrandolos uno a la vez en el mismo cursor de la pantallada.
 
 
 
